@@ -1,0 +1,32 @@
+
+<div class="container mt-5">
+    <h2 class="mb-4">Submit an Obituary</h2>
+    <form method="post" id="obituaryForm">
+        <div class="mb-3">
+            {{ form.name.label_tag }}
+            {{ form.name }}
+            <div class="invalid-feedback">Please provide a name.</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                {{ form.date_of_birth.label_tag }}
+                {{ form.date_of_birth }}
+            </div>
+            <div class="col-md-6">
+                {{ form.date_of_death.label_tag }}
+                {{ form.date_of_death }}
+            </div>
+        </div>
+        <div class="mb-3">
+            {{ form.content.label_tag }}
+            {{ form.content }}
+        </div>
+        <div class="mb-3">
+            {{ form.author.label_tag }}
+            {{ form.author }}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<script src="{% static 'js/form_validation.js' %}"> </script>
